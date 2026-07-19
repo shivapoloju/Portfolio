@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(11, 11, 12, 0.6);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-navbar {
+  background: rgba(3, 3, 3, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Neon Glow Animations */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.15);
+}
+.glow-primary:hover {
+  box-shadow: 0 0 25px rgba(251, 191, 36, 0.35);
+  border-color: rgba(251, 191, 36, 0.5);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+.glow-secondary:hover {
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.glow-accent {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+}
+.glow-accent:hover {
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
+  border-color: rgba(168, 85, 247, 0.5);
+}
+
+/* Scroll Animations helper */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom linear gradient animations */
+@keyframes gradient-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-bg 8s ease infinite;
+}
